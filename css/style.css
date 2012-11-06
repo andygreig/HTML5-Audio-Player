@@ -1,0 +1,135 @@
+	/* HTML5 Boilerplate  */
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio:not([controls]) { display: none; }
+	[hidden] { display: none; }
+
+	html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+	body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+	::-moz-selection { background: #cacaca; text-shadow: none; }
+	::selection { background: #cacaca; text-shadow: none; }
+
+	a { color: #00e; }
+	a:visited { color: #551a8b; }
+	a:hover { color: #06e; }
+	a:focus { outline: thin dotted; }
+	a:hover, a:active { outline: 0; }
+	abbr[title], dfn[title] { border-bottom: 1px dotted #cacaca; cursor: help; }
+	b, strong { font-weight: bold; }
+	blockquote { margin: 1em 40px; }
+	dfn { font-style: italic; }
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+	ins { background: #ff9; color: #000; text-decoration: none; }
+	mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+	pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+	code { padding: 1px 4px; font-size: 90%; color: #D14; background-color: #F7F7F9; border: 1px solid #E1E1E8; border-radius: 3px; -webkit-border-radius: 3px; }
+	pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+	q { quotes: none; }
+	q:before, q:after { content: ""; content: none; }
+	small { font-size: 85%; }
+	sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+	sup { top: -0.5em; }
+	sub { bottom: -0.25em; }
+
+	ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+	dd { margin: 0 0 0 40px; }
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+	img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+	svg:not(:root) { overflow: hidden; }
+	figure { margin: 0; }
+
+	form { margin: 0; }
+	fieldset { border: 0; margin: 0; padding: 0; }
+
+	label { cursor: pointer; }
+	legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+	button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+	button, input { line-height: normal; }
+	button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+	button[disabled], input[disabled] { cursor: default; }
+	input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+	input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+	input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+	button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+	textarea { overflow: auto; vertical-align: top; resize: vertical; }
+	input:valid, textarea:valid {  }
+	input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+	table { border-collapse: collapse; border-spacing: 0; }
+	td { vertical-align: top; }
+
+	.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+/* ==|== Mobile Fixes ====================================================== */
+
+	* {
+	  /* prevent callout when holding tap on links (the native dialog that comes up) */
+	  -webkit-touch-callout: none; 
+
+	  /* prevent webkit from resizing text to fit */
+	  -webkit-text-size-adjust: none; 
+
+	  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	  /* prevent copy paste, to allow, change 'none' to 'text' */
+	  -webkit-user-select: none; 
+	}
+
+	// turn off webkit checkbox style, works for other inputs too
+	input[type="checkbox"] { -webkit-appearance: none; }
+
+	// placeholder text opacity
+	input::-webkit-input-placeholder { opacity: .8; }
+
+/* ==|== primary styles =====================================================
+	Author: 
+	========================================================================== */
+
+	body { background-color: #545454; }
+
+	/*	Typography 
+	=========================== */	
+	
+	/*	Buttons 
+	=========================== */	
+	
+	/* Audio Player
+	=========================== */
+
+	#audio_player { width:160px; height: 160px; position: relative; padding: 8px; margin: 100px auto; background: #f1f1f1; border-radius: 88px }
+	#audio_player .background { width: 140px; height: 140px; border: solid 10px #e5e5e5; background: #f1f1f1; border-radius: 80px }
+	#audio_player .btn { cursor: pointer }
+		#audio_player .btn_play { display: block; width: 64px; height: 64px; position: absolute; top: 50%; left: 50%; margin-top: -32px; margin-left: -32px; text-indent: -900em; z-index: 10; background: url(../images/button_play.png) 19px top no-repeat; background-size: 42px 62px }
+		/* pause */
+		#audio_player .btn_play.playing { background: url(../images/button_pause.png) center no-repeat; background-size: 54px 59px }
+
+	#audio_player .progress { position: absolute; width: 160px; height: 160px; top: 8px; left: 8px;}
+	#audio_player .progress .slice { position: absolute; width: 160px; height: 160px; clip: rect(0px,160px,160px,80px); }
+	#audio_player .progress .slice.gt50 { clip:rect(auto, auto, auto, auto); }
+	#audio_player .progress .slice .pie { border: 10px solid #276f84; position: absolute; width: 140px; height:140px; clip:rect(0,80px,160px,0);
+		-moz-border-radius:80px; -webkit-border-radius:80px; border-radius:80px;
+	}
+	#audio_player .progress .slice .pie.fill {
+		-moz-transform:rotate(180deg) !important;
+		-webkit-transform:rotate(180deg) !important;
+		-o-transform:rotate(180deg) !important;
+		transform:rotate(180deg) !important;
+	}
+
+/* ==|== media queries ====================================================== */
+
+	@media only screen and (min-width: 480px) {
+
+
+	}
+
+	@media only screen and (min-width: 768px) {
+
+	}
+
