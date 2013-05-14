@@ -42,6 +42,10 @@ app.player = (function(doc, $, undefined) {
 
 	bindings = function(){
 
+		$(document).on('touchmove', function(e){
+			e.preventDefault();
+		});
+
 		// play / pause
 		button.play.on('click', function(e) {
 			var $this = $(this);
